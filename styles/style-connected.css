@@ -1,0 +1,499 @@
+/* General styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Footer */
+header,
+footer {
+    background-color: rgb(29, 50, 96);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+footer {
+    padding: 2em 0;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Home Main Content Area */
+main.home-main {
+    flex: 1;
+    padding: 2em;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* OAuth Main Content Area */
+main.oauth-main {
+    flex: 1;
+    padding: 2em;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* OAuth Section */
+.oauth-section {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    font-weight: bold;
+    background-color: #c3e2c4;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* OAuth Info Section */
+.oauth-info {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.oauth-info h2 {
+    font-size: 24px;
+    color: #178668;
+    border-bottom: 2px solid #178668;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.oauth-info ol {
+    padding-left: 20px;
+}
+
+.oauth-info ol li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Messages and User Info */
+.info-message {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.user-email {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+    background-color: #289578;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-google {
+    background-color: rgb(29, 50, 96);
+    color: white;
+    padding: 15px 40px;
+    width: 200px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-sign-out {
+    background-color: rgb(29, 50, 96);
+    color: white;
+    padding: 15px 40px;
+    width: 200px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-google:hover {
+    background-color: rgb(71, 94, 144);
+}
+
+.button:hover {
+    background-color: #178668;
+}
+
+.signin-container .button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.mode-btn {
+    background-color: #26a785;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 2px 1px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.mode-btn:hover {
+    background-color: #26a785;
+}
+
+.mode-btn:focus,
+.mode-btn:active,
+.mode-btn.selected {
+    background-color: #c3e2c4;
+}
+
+/* Content Container */
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Sign-in Container */
+.signin-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.signin-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* Logged-in Container */
+.logged-in {
+    text-align: center;
+}
+
+/* Header Title */
+h1 {
+    text-align: center;
+}
+
+/* Navigation menu */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+nav a {
+    flex: 1;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+
+nav a:hover::after {
+    background-color: #c3e2c4;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Map container styles */
+.map-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Map styles */
+#map {
+    background-color: #f9f9f9;
+    height: 500px;
+    /* Adjust height as needed */
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+/* Weather styles */
+#weather-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 45px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border: 1px solid #e0e0e0;
+}
+
+#weather-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #289578;
+    border-bottom: 2px solid #289578;
+    padding-bottom: 10px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.weather-info strong {
+    color: #333;
+}
+
+
+.date-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.date-time p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+
+#date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+#hour {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.weather-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-city {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.weather-city:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #26a785;
+    margin-top: 10px;
+}
+#weather-icon{
+    width: 80px;
+    height: 80px;
+    align-items: center;
+}
+
+/* Directions container styles */
+#directions-container {
+    grid-column: 1 / span 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Distance info styles */
+#distance-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#distance-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Directions panel styles */
+#directions-panel {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+#directions-panel h3 {
+    font-size: 20px;
+    color: #26a785;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #26a785;
+    padding-bottom: 5px;
+}
+
+/* Directions info styles */
+#directions-panel p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Step styles */
+#directions-panel .step {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#directions-panel .step:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+/* Hide empty elements */
+#distance-info:empty,
+#directions-container:empty,
+#directions-panel:empty {
+    display: none;
+}
+
+/* About page style */
+.about-section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    align-items: center;
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+.about-section h3{
+    color: #178668;
+}
+
+.header-title{
+    background-color: rgb(21, 38, 75);
+    padding: 6px;
+    margin-top: 0;
+    color: white;
+}
+
